@@ -1,4 +1,3 @@
-
 require 'bundler/setup'
 require 'rubygems'
 require 'sinatra'
@@ -65,13 +64,13 @@ class ExampleServer < Sinatra::Base
   # FIXME #1: implement reverse service that reverses the message
   get '/reverse/:message' do
     content_type 'text/plain', :charset => 'utf-8'
-    params[:message]
+    params[:message].reverse
   end
 
   # FIXME #1: implement reverse service that reverses the message
   get '/reverse' do
     content_type 'text/plain', :charset => 'utf-8'
-    params[:message]
+    params[:message].reverse
   end
 
   # FIXME #2: implement pig latin service that translates the message
